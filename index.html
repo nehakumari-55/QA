@@ -3,340 +3,2103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Neha Kumari — Quality Assurance Engineer, Test Automation & Quality Engineering portfolio." />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Neha Kumari | Quality Assurance Engineer</title>
+
+  <meta
+    name="description"
+    content="Neha Kumari — Senior Software Test Engineer specializing in Quality Assurance, SIT, UAT, API Testing, Test Automation and Quality Engineering."
+  />
+
+  <meta
+    name="keywords"
+    content="Neha Kumari, QA Engineer, Senior QA Engineer, Software Test Engineer, Test Automation, Quality Assurance, SIT, UAT, API Testing, Selenium, Playwright, Postman, SQL"
+  />
+
+  <meta name="author" content="Neha Kumari" />
+  <meta name="theme-color" content="#07101f" />
+
+  <title>Neha Kumari | Senior Software Test Engineer</title>
+
   <style>
-    :root{
-      --bg:#07101f; --panel:#0d1729; --panel2:#101d32; --text:#edf4ff;
-      --muted:#a9b7cc; --line:rgba(255,255,255,.10); --accent:#65d6c7;
-      --accent2:#8ea7ff; --shadow:0 20px 60px rgba(0,0,0,.28); --radius:22px;
+    :root {
+      --bg: #07101f;
+      --bg-soft: #0a1425;
+      --panel: #0d1729;
+      --panel-2: #101d32;
+
+      --text: #edf4ff;
+      --text-soft: #d8e3f3;
+      --muted: #a9b7cc;
+
+      --line: rgba(255, 255, 255, 0.10);
+      --line-strong: rgba(255, 255, 255, 0.16);
+
+      --accent: #65d6c7;
+      --accent-soft: rgba(101, 214, 199, 0.10);
+
+      --secondary: #8ea7ff;
+      --secondary-soft: rgba(142, 167, 255, 0.10);
+
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+      --shadow-soft: 0 12px 35px rgba(0, 0, 0, 0.18);
+
+      --radius: 22px;
+      --radius-small: 16px;
+
+      --max-width: 1120px;
     }
-    *{box-sizing:border-box;scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(circle at 85% 10%,rgba(101,214,199,.11),transparent 30%),radial-gradient(circle at 10% 35%,rgba(142,167,255,.10),transparent 28%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1120px,92%);margin:auto}
-    nav{position:sticky;top:0;z-index:20;background:rgba(7,16,31,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
-    .brand{font-weight:800;letter-spacing:.02em}.brand span{color:var(--accent)}
-    .links{display:flex;gap:24px;font-size:.9rem;color:var(--muted)}
-    .links a:hover{color:var(--text)}
-    .hero{min-height:calc(100vh - 72px);display:grid;align-items:center;padding:82px 0 70px}
-    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:.78rem}
-    h1{font-size:clamp(3rem,7vw,6.4rem);line-height:.98;margin:18px 0 25px;letter-spacing:-.055em;max-width:920px}
-    .hero h1 em{font-style:normal;color:var(--accent)}
-    .lead{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--muted);max-width:790px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
-    .btn{padding:12px 18px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-weight:700}
-    .btn.primary{background:var(--accent);color:#07101f;border-color:var(--accent)}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px}
-    .stat{padding:20px;border:1px solid var(--line);background:rgba(13,23,41,.7);border-radius:18px}
-    .stat b{display:block;font-size:1.65rem}.stat span{color:var(--muted);font-size:.82rem}
-    section{padding:90px 0;border-top:1px solid var(--line)}
-    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
-    h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.05;margin:0;letter-spacing:-.04em}
-    .section-head p{color:var(--muted);max-width:560px;margin:0}
-    .story{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .card{background:linear-gradient(145deg,rgba(16,29,50,.9),rgba(13,23,41,.7));border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-    .card h3{margin-top:0;font-size:1.15rem}.card p{color:var(--muted)}
-    .timeline{position:relative;margin-top:30px}
-    .timeline:before{content:"";position:absolute;left:11px;top:5px;bottom:5px;width:1px;background:var(--line)}
-    .role{position:relative;padding-left:42px;margin:0 0 36px}
-    .dot{position:absolute;left:5px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(101,214,199,.09)}
-    .role .date{color:var(--accent);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-    .role h3{margin:7px 0 3px;font-size:1.3rem}.role .company{color:var(--muted)}
-    .role ul{margin:14px 0 0;padding-left:20px;color:var(--muted)}
-    .role li{margin:7px 0}
-    .skills{display:flex;flex-wrap:wrap;gap:10px}
-    .pill{padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid var(--line);font-size:.88rem;color:#dbe7f7}
-    .skillgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .skillcard h3{color:var(--accent);font-size:1rem}
-    .achievement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .metric{font-size:2.7rem;font-weight:900;color:var(--accent);line-height:1}
-    .metric-card p{color:var(--muted)}
-    .journey{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-    .quote{font-size:1.25rem;line-height:1.55;color:#dce8f8}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .contact a{color:var(--accent)}
-    footer{padding:35px 0 55px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:20px}
-    .tagline{font-size:1.7rem;line-height:1.25;max-width:700px;margin:0}
-    @media(max-width:850px){
-      .links{display:none}.stats{grid-template-columns:repeat(2,1fr)}
-      .story,.journey,.contact{grid-template-columns:1fr}.skillgrid{grid-template-columns:1fr}
+
+    /* =========================
+       RESET
+    ========================= */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
-    @media(max-width:520px){
-      .hero{padding-top:55px}.stats{grid-template-columns:1fr 1fr}.stat{padding:15px}
-      section{padding:65px 0}footer{display:block}.hero-actions .btn{width:100%;text-align:center}
+
+    html {
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 85% 8%,
+          rgba(101, 214, 199, 0.11),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 8% 35%,
+          rgba(142, 167, 255, 0.09),
+          transparent 28%
+        ),
+        var(--bg);
+
+      color: var(--text);
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    ::selection {
+      background: rgba(101, 214, 199, 0.25);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       LAYOUT
+    ========================= */
+
+    .wrap {
+      width: min(var(--max-width), 92%);
+      margin-inline: auto;
+    }
+
+    section {
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(7, 16, 31, 0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navin {
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 850;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .links a {
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .links a:hover {
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: calc(100vh - 72px);
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 90px;
+      padding-bottom: 80px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      color: var(--accent);
+
+      font-size: 0.76rem;
+      font-weight: 800;
+
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+      background: var(--accent);
+
+      box-shadow: 0 0 0 5px var(--accent-soft);
+    }
+
+    h1 {
+      max-width: 960px;
+
+      margin: 20px 0 28px;
+
+      font-size: clamp(3.2rem, 7vw, 6.6rem);
+      line-height: 0.96;
+
+      letter-spacing: -0.06em;
+      font-weight: 850;
+    }
+
+    h1 em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .lead {
+      max-width: 850px;
+
+      margin: 0 0 16px;
+
+      color: var(--muted);
+
+      font-size: clamp(1.05rem, 2vw, 1.23rem);
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 46px;
+
+      padding: 11px 18px;
+
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+
+      background: rgba(13, 23, 41, 0.85);
+
+      color: var(--text);
+
+      font-size: 0.9rem;
+      font-weight: 750;
+
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(101, 214, 199, 0.42);
+      background: var(--panel-2);
+    }
+
+    .btn.primary {
+      color: #07101f;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn.primary:hover {
+      background: #7ce2d5;
+    }
+
+    /* =========================
+       HERO STATS
+    ========================= */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 14px;
+
+      margin-top: 55px;
+    }
+
+    .stat {
+      padding: 20px;
+
+      border: 1px solid var(--line);
+      border-radius: 18px;
+
+      background: rgba(13, 23, 41, 0.68);
+
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stat b {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: var(--text);
+
+      font-size: 1.65rem;
+      line-height: 1.2;
+      font-weight: 850;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .note {
+      margin-top: 14px;
+
+      color: #7f8fa6;
+
+      font-size: 0.72rem;
+    }
+
+    /* =========================
+       SECTION HEADERS
+    ========================= */
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      gap: 35px;
+
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      max-width: 600px;
+
+      margin: 0;
+
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      line-height: 1.05;
+
+      letter-spacing: -0.045em;
+      font-weight: 820;
+    }
+
+    .section-head p {
+      max-width: 560px;
+
+      margin: 0;
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .card {
+      padding: 30px;
+
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(16, 29, 50, 0.92),
+          rgba(13, 23, 41, 0.74)
+        );
+
+      box-shadow: var(--shadow);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+
+      font-size: 1.15rem;
+      font-weight: 780;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .story {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 22px;
+    }
+
+    .story .card {
+      min-height: 100%;
+    }
+
+    /* =========================
+       CAREER TIMELINE
+    ========================= */
+
+    .timeline {
+      position: relative;
+
+      margin-top: 10px;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      left: 11px;
+      top: 8px;
+      bottom: 8px;
+
+      width: 1px;
+
+      background: var(--line);
+    }
+
+    .role {
+      position: relative;
+
+      padding-left: 44px;
+
+      margin-bottom: 48px;
+    }
+
+    .role:last-child {
+      margin-bottom: 0;
+    }
+
+    .dot {
+      position: absolute;
+
+      left: 5px;
+      top: 7px;
+
+      width: 13px;
+      height: 13px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      box-shadow:
+        0 0 0 5px rgba(101, 214, 199, 0.09);
+    }
+
+    .role .date {
+      color: var(--accent);
+
+      font-size: 0.78rem;
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .role h3 {
+      margin: 7px 0 2px;
+
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .company {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .role ul {
+      margin: 17px 0 0;
+
+      padding-left: 20px;
+
+      color: var(--muted);
+    }
+
+    .role li {
+      margin: 8px 0;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skillgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .skillcard h3 {
+      color: var(--accent);
+
+      font-size: 0.98rem;
+      font-weight: 800;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 9px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 8px 12px;
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+
+      background: rgba(255, 255, 255, 0.045);
+
+      color: var(--text-soft);
+
+      font-size: 0.81rem;
+      line-height: 1.2;
+    }
+
+    /* =========================
+       IMPACT
+    ========================= */
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .metric {
+      margin-bottom: 12px;
+
+      color: var(--accent);
+
+      font-size: 2.8rem;
+      line-height: 1;
+
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .metric-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .metric-card p {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       PHILOSOPHY
+    ========================= */
+
+    .journey {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+
+      gap: 22px;
+    }
+
+    .quote {
+      margin: 18px 0 0;
+
+      color: var(--text-soft);
+
+      font-size: 1.3rem;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    /* =========================
+       QA WORK
+    ========================= */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .project-number {
+      margin-bottom: 15px;
+
+      color: var(--accent);
+
+      font-size: 0.75rem;
+      font-weight: 850;
+
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .project-card p {
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       AI SECTION
+    ========================= */
+
+    .ai-card {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(101, 214, 199, 0.07),
+          rgba(13, 23, 41, 0.85)
+        );
+
+      border-color: rgba(101, 214, 199, 0.18);
+    }
+
+    .ai-flow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 10px;
+
+      margin-top: 22px;
+    }
+
+    .ai-step {
+      padding: 15px;
+
+      border: 1px solid var(--line);
+      border-radius: 14px;
+
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .ai-step strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: var(--accent);
+
+      font-size: 0.76rem;
+    }
+
+    .ai-step span {
+      color: var(--text-soft);
+
+      font-size: 0.83rem;
+    }
+
+    /* =========================
+       CREDENTIALS
+    ========================= */
+
+    .credential-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .credential {
+      padding: 14px 16px;
+
+      border: 1px solid var(--line);
+      border-radius: 14px;
+
+      background: rgba(255, 255, 255, 0.035);
+
+      color: var(--text-soft);
+    }
+
+    /* =========================
+       LOCATION
+    ========================= */
+
+    .location-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 22px;
+    }
+
+    .location-highlight {
+      color: var(--accent);
+
+      font-size: 1.1rem;
+      font-weight: 750;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-card {
+      padding: 42px;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(101, 214, 199, 0.10),
+          transparent 35%
+        ),
+        linear-gradient(
+          145deg,
+          rgba(16, 29, 50, 0.95),
+          rgba(13, 23, 41, 0.8)
+        );
+    }
+
+    .contact-card h2 {
+      max-width: 760px;
+
+      margin-top: 15px;
+    }
+
+    .contact-text {
+      max-width: 760px;
+
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 28px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 35px 0 55px;
+
+      color: var(--muted);
+
+      font-size: 0.82rem;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .links {
+        display: none;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skillgrid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .story,
+      .journey,
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+
+      section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding-top: 65px;
+        padding-bottom: 65px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 16vw, 5rem);
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 18px;
+      }
+
+      .story,
+      .skillgrid,
+      .achievement-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        padding: 16px;
+      }
+
+      .stat b {
+        font-size: 1.4rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .card {
+        padding: 23px;
+      }
+
+      .role {
+        padding-left: 36px;
+      }
+
+      footer {
+        display: block;
+      }
+
+      footer span {
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
+
 <body>
-<nav>
-  <div class="wrap navin">
-    <a class="brand" href="#top">NEHA<span> </span>KUMARI</a>
-    <div class="links">
-      <a href="#story">Story</a><a href="#journey">Journey</a><a href="#skills">Skills</a>
-      <a href="#impact">Impact</a><a href="#contact">Contact</a>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav aria-label="Primary navigation">
+
+    <div class="wrap navin">
+
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Neha QA home"
+      >
+        NEHA<span>.</span>QA
+      </a>
+
+      <div class="links">
+
+        <a href="#story">About</a>
+        <a href="#journey">Experience</a>
+        <a href="#skills">Expertise</a>
+        <a href="#impact">Impact</a>
+        <a href="#work">QA Work</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
     </div>
-  </div>
-</nav>
 
-<main id="top">
-  <header class="hero wrap">
-    <div>
-      <div class="eyebrow">Quality Assurance • Test Automation • Quality Engineering</div>
-      <h1>Building confidence<br>before software<br><em>meets the world.</em></h1>
-      <p class="lead">
-        I’m Neha Kumari, a Quality Assurance Engineer with 7+ years of experience turning requirements,
-        risks and edge cases into reliable software. My journey spans enterprise QA, automation,
-        Agile delivery, API and integration testing, SAP application testing, and modern AI-assisted QA.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#journey">Explore my journey</a>
-        <a class="btn" href="mailto:nehakumari.de55@gmail.com">Let's connect</a>
-        <a class="btn" href="https://www.linkedin.com/in/neha-kumari-4b6493107/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><b>7+</b><span>Years in QA & Testing</span></div>
-        <div class="stat"><b>60%</b><span>Regression effort reduced</span></div>
-        <div class="stat"><b>45%</b><span>Defect detection improvement</span></div>
-        <div class="stat"><b>3</b><span>Enterprise organizations</span></div>
-      </div>
-    </div>
-  </header>
+  </nav>
 
-  <section id="story">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>A QA journey built on curiosity.</h2>
-        <p>Testing became more than finding defects: it became a way of understanding products, people, risks and the systems connecting them.</p>
-      </div>
-      <div class="story">
-        <article class="card">
-          <h3>Where it started</h3>
-          <p>
-            With a Computer Science & Engineering background, I began my professional journey close to the software
-            development lifecycle. Early QA work taught me the fundamentals: understand the requirement, question the
-            assumption, reproduce the problem, and make the result visible.
-          </p>
-        </article>
-        <article class="card">
-          <h3>How it evolved</h3>
-          <p>
-            Over time, my role moved from execution toward engineering: automation frameworks, API and integration
-            testing, CI/CD, regression strategy, structured test management and closer collaboration with product and
-            development teams. Today I combine that foundation with SAP-focused testing and AI-assisted QA practices.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <section id="journey">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Professional journey</h2>
-        <p>Three stages, one direction: make quality earlier, smarter and easier to sustain.</p>
-      </div>
-      <div class="timeline">
-        <article class="role">
-          <span class="dot"></span>
-          <div class="date">Jul 2022 — Sep 2025</div>
-          <h3>QA & Automation Engineer</h3>
-          <div class="company">Nagarro Software Pvt. Ltd. — India</div>
-          <ul>
-            <li>Developed test strategies across automated, exploratory, UI, API, integration and regression testing.</li>
-            <li>Built and maintained automation with Java, Selenium, JUnit, REST Assured, SOAP UI and Postman.</li>
-            <li>Integrated automated tests into Jenkins CI/CD pipelines and managed test repositories, test data and regression suites.</li>
-            <li>Applied Generative AI, automated test case generation, Prompt Engineering and AI-output validation.</li>
-            <li>Worked with developers, product owners, architects and business stakeholders on quality and continuous improvement.</li>
-          </ul>
-        </article>
+  <main id="top">
 
-        <article class="role">
-          <span class="dot"></span>
-          <div class="date">May 2021 — Jul 2022</div>
-          <h3>QA Engineer — Test Automation & Integration Testing</h3>
-          <div class="company">Cognizant Technology Solutions Pvt. Ltd. — India</div>
-          <ul>
-            <li>Executed functional, regression, system integration, exploratory and user acceptance testing.</li>
-            <li>Automated UI, API and integration scenarios using Selenium, Java, JUnit, REST Assured and Postman.</li>
-            <li>Participated in Agile refinements, test planning, acceptance testing and defect reviews.</li>
-            <li>Supported enterprise application and SAP-related testing activities.</li>
-          </ul>
-        </article>
+    <!-- =========================
+         HERO
+    ========================= -->
 
-        <article class="role">
-          <span class="dot"></span>
-          <div class="date">Apr 2018 — May 2021</div>
-          <h3>QA Analyst</h3>
-          <div class="company">Infosys Pvt. Ltd. — India</div>
-          <ul>
-            <li>Performed functional, system, regression, integration and exploratory testing.</li>
-            <li>Created test cases from business requirements and executed structured test scenarios.</li>
-            <li>Tested REST APIs and SOAP Web Services with Postman and SOAP UI.</li>
-            <li>Supported Selenium automation and worked with development and business teams throughout the SDLC.</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
+    <header class="hero wrap">
 
-  <section id="skills">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>My quality toolkit</h2>
-        <p>A practical mix of testing depth, automation engineering, Agile delivery and emerging QA techniques.</p>
-      </div>
-      <div class="skillgrid">
-        <article class="card skillcard">
-          <h3>Testing & QA</h3>
-          <div class="skills">
-            <span class="pill">Functional Testing</span><span class="pill">Regression Testing</span>
-            <span class="pill">Exploratory Testing</span><span class="pill">System Testing</span>
-            <span class="pill">Integration Testing</span><span class="pill">E2E Testing</span>
-            <span class="pill">UAT</span><span class="pill">Defect Management</span>
-          </div>
-        </article>
-        <article class="card skillcard">
-          <h3>Automation & APIs</h3>
-          <div class="skills">
-            <span class="pill">Java</span><span class="pill">Selenium</span><span class="pill">JUnit</span>
-            <span class="pill">REST Assured</span><span class="pill">Postman</span><span class="pill">SOAP UI</span>
-            <span class="pill">Automation Frameworks</span><span class="pill">API Testing</span>
-          </div>
-        </article>
-        <article class="card skillcard">
-          <h3>SAP & Enterprise</h3>
-          <div class="skills">
-            <span class="pill">SAP Testing</span><span class="pill">SAP Application Testing</span>
-            <span class="pill">SAP Fiori Testing</span><span class="pill">Enterprise Applications</span>
-            <span class="pill">UI Testing</span><span class="pill">Integration Testing</span>
-          </div>
-        </article>
-        <article class="card skillcard">
-          <h3>DevOps & Data</h3>
-          <div class="skills">
-            <span class="pill">Jenkins</span><span class="pill">CI/CD</span><span class="pill">Git</span>
-            <span class="pill">SQL</span><span class="pill">Oracle</span><span class="pill">Splunk</span>
-          </div>
-        </article>
-        <article class="card skillcard">
-          <h3>Test Management</h3>
-          <div class="skills">
-            <span class="pill">Test Strategy</span><span class="pill">Test Cases</span><span class="pill">Test Coverage</span>
-            <span class="pill">Test Repositories</span><span class="pill">Test Data</span><span class="pill">HP ALM</span>
-            <span class="pill">Aqua</span><span class="pill">TestRail</span><span class="pill">Jira</span>
-          </div>
-        </article>
-        <article class="card skillcard">
-          <h3>Modern QA</h3>
-          <div class="skills">
-            <span class="pill">Shift-Left</span><span class="pill">Shift-Right</span><span class="pill">Monitoring</span>
-            <span class="pill">Observability</span><span class="pill">Generative AI</span><span class="pill">AI-assisted Testing</span>
-            <span class="pill">Prompt Engineering</span><span class="pill">AI Test Case Generation</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+      <div>
 
-  <section id="impact">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Impact, not just activity.</h2>
-        <p>The outcomes I’m proud of are the ones that made testing faster, defects more visible and releases more predictable.</p>
-      </div>
-      <div class="achievement-grid">
-        <article class="card metric-card">
-          <div class="metric">60%</div>
-          <h3>Less regression effort</h3>
-          <p>Achieved through scalable test automation frameworks and stronger regression practices.</p>
-        </article>
-        <article class="card metric-card">
-          <div class="metric">45%</div>
-          <h3>Better defect detection</h3>
-          <p>Improved through exploratory testing, API testing and integration testing approaches.</p>
-        </article>
-        <article class="card metric-card">
-          <div class="metric">CI/CD</div>
-          <h3>Continuous testing</h3>
-          <p>Automated test execution integrated into delivery pipelines for enterprise releases.</p>
-        </article>
-        <article class="card metric-card">
-          <div class="metric">AI</div>
-          <h3>Future-ready QA</h3>
-          <p>Applied AI-assisted testing and Generative AI techniques for test case generation and review.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="journey">
-        <article class="card">
-          <div class="eyebrow">My QA philosophy</div>
-          <p class="quote">
-            “Quality is not a final checkpoint. It is a conversation that starts with the requirement,
-            becomes evidence through testing, and continues into production.”
-          </p>
-        </article>
-        <article class="card">
-          <h3>What I bring to a team</h3>
-          <p>
-            Analytical thinking without losing sight of the user. Automation where it creates leverage.
-            Exploratory testing where curiosity finds what scripts cannot. Clear communication when a risk needs
-            attention. And continuous learning as tools, products and testing practices evolve.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Credentials & learning</h2>
-        <p>Professional development that complements hands-on QA experience.</p>
-      </div>
-      <div class="story">
-        <article class="card">
-          <h3>Certifications</h3>
-          <p>Professional Scrum Product Owner™ I (PSPO I)</p>
-          <p>LambdaTest Test Automation Professional Certificate</p>
-          <p>LambdaTest Software Testing Professional Certificate</p>
-        </article>
-        <article class="card">
-          <h3>Education & Languages</h3>
-          <p><strong>Bachelor of Technology — Computer Science & Engineering</strong><br>Meerut Institute of Engineering & Technology, India · 2012–2016</p>
-          <p><strong>English:</strong> C1 · <strong>German:</strong> B1, currently improving</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <div class="card">
-        <div class="eyebrow">Open to the next chapter</div>
-        <h2>Let’s build quality into the product, not bolt it on at the end.</h2>
-        <p style="color:var(--muted);max-width:700px">
-          Based in Düsseldorf, Germany, I’m interested in Quality Assurance, Test Automation and Quality Engineering
-          opportunities where I can contribute to reliable enterprise software and continue growing in modern QA.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="mailto:nehakumari.de55@gmail.com">Email me</a>
-          <a class="btn" href="https://www.linkedin.com/in/neha-kumari-4b6493107/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+        <div class="eyebrow">
+          Senior Software Test Engineer
         </div>
-      </div>
-    </div>
-  </section>
-</main>
 
-<footer class="wrap">
-  <span>© 2026 Neha Kumari · Quality Assurance Engineer</span>
-  <span>Built for GitHub Pages · Single-file portfolio</span>
-</footer>
+        <h1>
+          Building confidence<br />
+          in software,<br />
+          <em>one test at a time.</em>
+        </h1>
+
+        <p class="lead">
+          I’m Neha Kumari, a Software Quality Assurance professional with
+          <strong>8+ years of experience</strong> across enterprise software
+          testing, with a strong focus on functional testing, SIT, UAT,
+          API validation, automation, regression, integration testing and
+          quality-focused Agile delivery.
+        </p>
+
+        <p class="lead">
+          I combine analytical thinking, business understanding and hands-on
+          technical testing to identify risks early, validate end-to-end
+          journeys, investigate defects and help teams deliver reliable
+          software with confidence.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn primary"
+            href="#journey"
+          >
+            Explore my experience
+          </a>
+
+          <a
+            class="btn"
+            href="mailto:nehakumari.de55@gmail.com"
+          >
+            Let's connect
+          </a>
+
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/neha-kumari-4b6493107/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+        </div>
+
+
+        <div class="stats">
+
+          <div class="stat">
+            <b>8+</b>
+            <span>Years in QA & Software Testing</span>
+          </div>
+
+          <div class="stat">
+            <b>SIT</b>
+            <span>System Integration Testing</span>
+          </div>
+
+          <div class="stat">
+            <b>UAT</b>
+            <span>User Acceptance Testing</span>
+          </div>
+
+          <div class="stat">
+            <b>60%</b>
+            <span>Regression effort reduction*</span>
+          </div>
+
+        </div>
+
+        <div class="note">
+          *Selected professional achievement. Metrics should remain aligned
+          with evidence that can be substantiated in an interview.
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="story">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <h2>
+            Quality is more than finding bugs.
+          </h2>
+
+          <p>
+            I approach testing as a product-quality discipline: understand
+            the requirement, challenge assumptions, identify risk, validate
+            the user journey and make quality visible to the whole team.
+          </p>
+
+        </div>
+
+
+        <div class="story">
+
+          <article class="card">
+
+            <h3>
+              A quality-focused approach
+            </h3>
+
+            <p>
+              With a Computer Science & Engineering background, I have built
+              my career around taking ownership of software quality.
+              My experience spans functional, regression, system,
+              integration, exploratory, API, UI, E2E and user acceptance
+              testing.
+            </p>
+
+            <p>
+              I believe effective testing starts before execution:
+              understanding requirements, identifying ambiguity, defining
+              risk-based coverage and ensuring that the right stakeholders
+              are involved at the right time.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              Connecting business and technology
+            </h3>
+
+            <p>
+              I work closely with business users, developers, technical
+              teams, data teams and release management. During regression
+              cycles, defect triage, cutover activities and go-live
+              readiness checks, my focus is to keep delivery controlled,
+              transparent and well supported from a quality perspective.
+            </p>
+
+            <p>
+              This combination of technical testing and stakeholder
+              collaboration helps me contribute effectively to complex
+              enterprise environments.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section id="journey">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <h2>
+            Professional experience
+          </h2>
+
+          <p>
+            More than eight years of progressively broader responsibility
+            across enterprise QA, integration testing, automation and
+            quality delivery.
+          </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <!-- NAGARRO -->
+
+          <article class="role">
+
+            <span class="dot"></span>
+
+            <div class="date">
+              Jul 2022 — Sep 2025
+            </div>
+
+            <h3>
+              Senior QA & Automation Engineer
+            </h3>
+
+            <div class="company">
+              Nagarro Software Pvt. Ltd. · India
+            </div>
+
+            <ul>
+
+              <li>
+                Designed and executed test scenarios based on requirements,
+                user stories, acceptance criteria and business processes.
+              </li>
+
+              <li>
+                Performed functional, regression, smoke, exploratory,
+                integration, API, UI and end-to-end testing.
+              </li>
+
+              <li>
+                Supported SIT and UAT activities, including defect triage,
+                regression cycles, release validation and stakeholder
+                communication.
+              </li>
+
+              <li>
+                Validated REST APIs using Postman and verified backend
+                data consistency through SQL-based database checks.
+              </li>
+
+              <li>
+                Supported UI automation using Playwright and Selenium and
+                contributed to CI/CD-oriented testing workflows.
+              </li>
+
+              <li>
+                Collaborated with developers, product owners, architects
+                and business stakeholders to identify risks and improve
+                quality.
+              </li>
+
+              <li>
+                Explored Generative AI, prompt engineering and AI-assisted
+                approaches for test design and QA productivity.
+              </li>
+
+            </ul>
+
+          </article>
+
+
+          <!-- COGNIZANT -->
+
+          <article class="role">
+
+            <span class="dot"></span>
+
+            <div class="date">
+              May 2021 — Jul 2022
+            </div>
+
+            <h3>
+              QA Engineer — Test Automation & Integration Testing
+            </h3>
+
+            <div class="company">
+              Cognizant Technology Solutions Pvt. Ltd. · India
+            </div>
+
+            <ul>
+
+              <li>
+                Designed and executed functional test cases from business
+                and technical requirements.
+              </li>
+
+              <li>
+                Performed functional, regression, smoke, system
+                integration, API, UI, exploratory and UAT testing.
+              </li>
+
+              <li>
+                Validated REST APIs using Postman and verified backend
+                data using SQL.
+              </li>
+
+              <li>
+                Supported UI, API and integration automation using
+                Selenium, Java, JUnit and REST Assured.
+              </li>
+
+              <li>
+                Participated in Agile refinement, test planning, defect
+                reviews and release validation.
+              </li>
+
+              <li>
+                Supported enterprise application and SAP-related testing
+                activities.
+              </li>
+
+            </ul>
+
+          </article>
+
+
+          <!-- INFOSYS -->
+
+          <article class="role">
+
+            <span class="dot"></span>
+
+            <div class="date">
+              Apr 2018 — May 2021
+            </div>
+
+            <h3>
+              QA Analyst
+            </h3>
+
+            <div class="company">
+              Infosys Pvt. Ltd. · India
+            </div>
+
+            <ul>
+
+              <li>
+                Designed test scenarios from business requirements and
+                acceptance criteria.
+              </li>
+
+              <li>
+                Performed functional, system, regression, integration
+                and exploratory testing.
+              </li>
+
+              <li>
+                Tested REST APIs and SOAP Web Services using Postman
+                and SOAP UI.
+              </li>
+
+              <li>
+                Performed database validation using SQL and supported
+                end-to-end data verification.
+              </li>
+
+              <li>
+                Managed defects through the defect lifecycle and
+                collaborated with development and business teams.
+              </li>
+
+              <li>
+                Contributed to regression automation and QA process
+                improvements.
+              </li>
+
+            </ul>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERTISE
+    ========================= -->
+
+    <section id="skills">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <h2>
+            What I bring to a QA team.
+          </h2>
+
+          <p>
+            A practical combination of test leadership, technical depth,
+            analytical thinking and collaboration across the delivery
+            lifecycle.
+          </p>
+
+        </div>
+
+
+        <div class="skillgrid">
+
+
+          <article class="card skillcard">
+
+            <h3>
+              Test Leadership & Quality
+            </h3>
+
+            <div class="skills">
+
+              <span class="pill">Test Strategy</span>
+              <span class="pill">Test Planning</span>
+              <span class="pill">SIT</span>
+              <span class="pill">UAT</span>
+              <span class="pill">Risk-Based Testing</span>
+              <span class="pill">Regression</span>
+              <span class="pill">Defect Triage</span>
+              <span class="pill">Release Validation</span>
+              <span class="pill">Go-Live Readiness</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card skillcard">
+
+            <h3>
+              Web & UI Testing
+            </h3>
+
+            <div class="skills">
+
+              <span class="pill">Functional Testing</span>
+              <span class="pill">UI Testing</span>
+              <span class="pill">E2E Testing</span>
+              <span class="pill">Exploratory Testing</span>
+              <span class="pill">Cross-Browser Testing</span>
+              <span class="pill">Smoke Testing</span>
+              <span class="pill">Regression Testing</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card skillcard">
+
+            <h3>
+              API & Data Validation
+            </h3>
+
+            <div class="skills">
+
+              <span class="pill">REST API</span>
+              <span class="pill">Postman</span>
+              <span class="pill">REST Assured</span>
+              <span class="pill">JSON</span>
+              <span class="pill">SOAP UI</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Oracle</span>
+              <span class="pill">Data Validation</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card skillcard">
+
+            <h3>
+              Test Automation
+            </h3>
+
+            <div class="skills">
+
+              <span class="pill">Selenium</span>
+              <span class="pill">Playwright</span>
+              <span class="pill">Java</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">JUnit</span>
+              <span class="pill">Automation Frameworks</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card skillcard">
+
+            <h3>
+              Enterprise & Delivery
+            </h3>
+
+            <div class="skills">
+
+              <span class="pill">Enterprise Applications</span>
+              <span class="pill">SAP Testing</span>
+              <span class="pill">SAP Fiori</span>
+              <span class="pill">Agile Scrum</span>
+              <span class="pill">Jira</span>
+              <span class="pill">Confluence</span>
+              <span class="pill">CI/CD</span>
+              <span class="pill">Jenkins</span>
+              <span class="pill">Git</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card skillcard">
+
+            <h3>
+              Modern Quality Engineering
+            </h3>
+
+            <div class="skills">
+
+              <span class="pill">Shift Left</span>
+              <span class="pill">Shift Right</span>
+              <span class="pill">Monitoring</span>
+              <span class="pill">Observability</span>
+              <span class="pill">Generative AI</span>
+              <span class="pill">AI-Assisted Testing</span>
+              <span class="pill">Prompt Engineering</span>
+              <span class="pill">LLM-Assisted QA</span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QA PHILOSOPHY
+    ========================= -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="journey">
+
+
+          <article class="card">
+
+            <div class="eyebrow">
+              My QA philosophy
+            </div>
+
+            <p class="quote">
+              “Quality is not a final checkpoint. It is a conversation
+              that starts with the requirement, becomes evidence through
+              testing, and continues into production.”
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              Quality through collaboration
+            </h3>
+
+            <p>
+              I see QA as a connecting function between business and
+              technology. My role is not only to execute test cases, but
+              also to make risks visible, challenge assumptions, provide
+              reliable evidence and help teams make informed release
+              decisions.
+            </p>
+
+            <p>
+              Whether working with business users during UAT, developers
+              during defect investigation, data teams during validation
+              or release teams during cutover, I focus on keeping quality
+              transparent and actionable.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         IMPACT
+    ========================= -->
+
+    <section id="impact">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <h2>
+            Impact, not just activity.
+          </h2>
+
+          <p>
+            The outcomes I value most are those that improve confidence,
+            visibility and efficiency throughout the software delivery
+            lifecycle.
+          </p>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+
+          <article class="card metric-card">
+
+            <div class="metric">
+              60%
+            </div>
+
+            <h3>
+              Regression effort reduction
+            </h3>
+
+            <p>
+              Improved regression efficiency through automation,
+              reusable coverage and stronger regression practices.
+            </p>
+
+          </article>
+
+
+          <article class="card metric-card">
+
+            <div class="metric">
+              45%
+            </div>
+
+            <h3>
+              Defect detection improvement
+            </h3>
+
+            <p>
+              Improved defect visibility through exploratory testing,
+              API validation and stronger integration coverage.
+            </p>
+
+          </article>
+
+
+          <article class="card metric-card">
+
+            <div class="metric">
+              SIT
+            </div>
+
+            <h3>
+              Integration confidence
+            </h3>
+
+            <p>
+              Experience with testing interconnected applications,
+              APIs, data flows and business processes across integration
+              cycles.
+            </p>
+
+          </article>
+
+
+          <article class="card metric-card">
+
+            <div class="metric">
+              UAT
+            </div>
+
+            <h3>
+              Business confidence
+            </h3>
+
+            <p>
+              Supporting business users and stakeholders through
+              acceptance testing, defect resolution, regression and
+              release readiness.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SELECTED QA WORK
+    ========================= -->
+
+    <section id="work">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <h2>
+            Selected QA work.
+          </h2>
+
+          <p>
+            Capability-focused examples demonstrating how I approach
+            real-world software testing problems without exposing
+            confidential client information.
+          </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+          <article class="card project-card">
+
+            <div class="project-number">
+              01 · API
+            </div>
+
+            <h3>
+              REST API Quality Suite
+            </h3>
+
+            <p>
+              A Postman-based API testing approach covering positive and
+              negative scenarios, response validation, authentication,
+              boundary conditions and data consistency.
+            </p>
+
+            <div class="skills">
+
+              <span class="pill">Postman</span>
+              <span class="pill">REST API</span>
+              <span class="pill">JSON</span>
+              <span class="pill">SQL</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card project-card">
+
+            <div class="project-number">
+              02 · E2E
+            </div>
+
+            <h3>
+              Web E2E Regression Framework
+            </h3>
+
+            <p>
+              A maintainable UI automation structure demonstrating
+              reusable components, stable selectors, assertions,
+              test data and CI-friendly execution.
+            </p>
+
+            <div class="skills">
+
+              <span class="pill">Playwright</span>
+              <span class="pill">Selenium</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">E2E</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card project-card">
+
+            <div class="project-number">
+              03 · QA
+            </div>
+
+            <h3>
+              Test Design & Risk Matrix
+            </h3>
+
+            <p>
+              A practical example of translating requirements into test
+              scenarios, identifying risk areas, prioritising regression
+              coverage and documenting expected behaviour.
+            </p>
+
+            <div class="skills">
+
+              <span class="pill">Test Design</span>
+              <span class="pill">Risk</span>
+              <span class="pill">Regression</span>
+              <span class="pill">SIT</span>
+              <span class="pill">UAT</span>
+
+            </div>
+
+          </article>
+
+
+          <article class="card project-card">
+
+            <div class="project-number">
+              04 · DATA
+            </div>
+
+            <h3>
+              API-to-Database Validation
+            </h3>
+
+            <p>
+              A demonstration of validating data flowing through an API
+              into persistence layers by combining API assertions with
+              SQL-based verification.
+            </p>
+
+            <div class="skills">
+
+              <span class="pill">Postman</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Data Validation</span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AI IN QA
+    ========================= -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="card ai-card">
+
+          <div class="eyebrow">
+            AI × Quality Engineering
+          </div>
+
+          <h2>
+            Using AI as a QA accelerator — not a replacement for judgement.
+          </h2>
+
+          <p>
+            I use AI selectively to reduce repetitive work, explore
+            additional scenarios and accelerate test design while keeping
+            requirements, test intent, evidence and final validation under
+            human control.
+          </p>
+
+
+          <div class="ai-flow">
+
+            <div class="ai-step">
+              <strong>01</strong>
+              <span>Understand requirements</span>
+            </div>
+
+            <div class="ai-step">
+              <strong>02</strong>
+              <span>Generate scenario ideas</span>
+            </div>
+
+            <div class="ai-step">
+              <strong>03</strong>
+              <span>Challenge edge cases</span>
+            </div>
+
+            <div class="ai-step">
+              <strong>04</strong>
+              <span>Create and refine tests</span>
+            </div>
+
+            <div class="ai-step">
+              <strong>05</strong>
+              <span>Execute and validate</span>
+            </div>
+
+            <div class="ai-step">
+              <strong>06</strong>
+              <span>Analyse defects and improve coverage</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CREDENTIALS
+    ========================= -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <h2>
+            Education & credentials.
+          </h2>
+
+          <p>
+            Professional development that complements hands-on software
+            testing and quality engineering experience.
+          </p>
+
+        </div>
+
+
+        <div class="story">
+
+
+          <article class="card">
+
+            <h3>
+              Certifications
+            </h3>
+
+            <div class="credential-list">
+
+              <div class="credential">
+                Professional Scrum Product Owner™ I (PSPO I)
+              </div>
+
+              <div class="credential">
+                LambdaTest Test Automation Professional Certificate
+              </div>
+
+              <div class="credential">
+                LambdaTest Software Testing Professional Certificate
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              Education
+            </h3>
+
+            <div class="credential-list">
+
+              <div class="credential">
+
+                <strong>
+                  Bachelor of Technology
+                </strong>
+
+                <br />
+
+                Computer Science & Engineering
+
+                <br />
+
+                Meerut Institute of Engineering & Technology
+                · 2012–2016
+
+              </div>
+
+            </div>
+
+            <p>
+              <strong>English:</strong> C1
+              <br />
+              <strong>German:</strong> B1 · currently improving
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATION
+    ========================= -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="location-card">
+
+
+          <article class="card">
+
+            <div class="eyebrow">
+              Based in Germany
+            </div>
+
+            <h2>
+              Düsseldorf
+            </h2>
+
+            <p class="location-highlight">
+              Germany · Open to hybrid & remote opportunities
+            </p>
+
+            <p>
+              Currently based in Düsseldorf, Germany, with a valid
+              residence permit and full employment rights.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              The roles I'm interested in
+            </h3>
+
+            <p>
+              I’m interested in Software Test Engineer, Senior QA Engineer,
+              Test Automation and Quality Engineering opportunities where
+              I can contribute to reliable software while continuing to
+              grow in modern testing practices.
+            </p>
+
+            <div class="skills">
+
+              <span class="pill">Software Test Engineer</span>
+              <span class="pill">QA Engineer</span>
+              <span class="pill">Senior QA Engineer</span>
+              <span class="pill">Test Automation</span>
+              <span class="pill">Quality Engineering</span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+      <div class="wrap">
+
+        <article class="card contact-card">
+
+          <div class="eyebrow">
+            Open to the next chapter
+          </div>
+
+          <h2>
+            Let’s build quality into the product,
+            not bolt it on at the end.
+          </h2>
+
+          <p class="contact-text">
+            If you are looking for someone who combines structured testing,
+            business understanding, technical validation and a strong sense
+            of ownership for quality, I would be happy to connect.
+          </p>
+
+
+          <div class="contact-links">
+
+            <a
+              class="btn primary"
+              href="mailto:nehakumari.de55@gmail.com"
+            >
+              Email me
+            </a>
+
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/neha-kumari-4b6493107/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect on LinkedIn ↗
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer class="wrap">
+
+    <span>
+      © 2026 Neha Kumari · Senior Software Test Engineer
+    </span>
+
+    <span>
+      Düsseldorf, Germany · Built for GitHub Pages
+    </span>
+
+  </footer>
+
+
 </body>
 </html>
